@@ -2,8 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testDoIt" : "SeanDeNigris 8/6/2012 16:15",
+		"testDoIt" : "SeanDeNigris 8/8/2012 10:09",
 		"testDoItError" : "SeanDeNigris 12/6/2011 09:48",
+		"testDoItReturningDate" : "SeanDeNigris 8/8/2012 10:14",
 		"testDoItReturningFalse" : "SeanDeNigris 8/6/2012 16:15",
-		"testDoItReturningString" : "SeanDeNigris 8/6/2012 16:19",
+		"testDoItReturningList" : "SeanDeNigris 8/8/2012 10:11",
+		"testDoItReturningString" : "SeanDeNigris 8/8/2012 10:10",
 		"testDoItReturningTrue" : "SeanDeNigris 8/6/2012 16:15" } }
