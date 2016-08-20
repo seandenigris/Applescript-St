@@ -1,4 +1,4 @@
-as yet unclassified
+scripting
 asOldManSay: aString
 	"self asOldManSay: 'you damn kids get off my lawn'"
 

@@ -1,4 +1,4 @@
-as yet unclassified
+private
 escapeTabsIn: aString 
 
 	^ aString copyWithout: Character tab.
