@@ -1,9 +1,11 @@
 scripting
 doIt: aString 
 
-	| process escapedString output |
-	escapedString := self escapeDoubleQuotesIn: aString.
-	process := PipeableOSProcess waitForCommand: '/usr/bin/osascript -ss -e "', escapedString, '"'.
+	|  escapedString command process output |
+	"We're using -e with a double-quoted string to pass our (possibly) multi-line string. A heredoc that was perfectly valid when used in the shell still didn't seem to work here"
+	escapedString := self makeSafeForMultiline: aString.
+	command := '/usr/bin/osascript -ss  -e ', escapedString surroundedByDoubleQuotes.
+	process := PipeableOSProcess waitForCommand: command.
 	process succeeded ifFalse: [ self error: process errorUpToEndOfFile ].
 	output := process output withoutTrailingBlanks.
 	process closePipes. "Per http://forum.world.st/Proper-way-to-use-many-PipeableOSProcesses-td69586.html"
