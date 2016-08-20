@@ -1,4 +1,4 @@
-private
+scripting
 smalltalkifyOutput: aString 
 
 	| isList |

@@ -1,4 +1,4 @@
-private
+scripting
 processDate: aString 
 
 	| dateString weekdayStripped |

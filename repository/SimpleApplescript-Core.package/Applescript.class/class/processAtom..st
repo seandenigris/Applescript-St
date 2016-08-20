@@ -1,4 +1,4 @@
-private
+scripting
 processAtom: aString
 
 	| isApplescriptString |
@@ -6,5 +6,5 @@ processAtom: aString
 	aString = 'false' ifTrue: [ ^ false ].
 	(aString beginsWith: 'date ') ifTrue: [ ^ self processDate: aString ].
 	isApplescriptString := aString first = $" and: [ aString last = $" ].
-	isApplescriptString ifTrue: [ ^ self stripQuotesFrom: aString ].
+	isApplescriptString ifTrue: [ ^ self processString: aString ].
 	^ ApplescriptReference on: aString.

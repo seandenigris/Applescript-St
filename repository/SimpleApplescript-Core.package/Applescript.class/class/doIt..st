@@ -1,4 +1,4 @@
-scripting
+private
 doIt: aString 
 
 	| output |
