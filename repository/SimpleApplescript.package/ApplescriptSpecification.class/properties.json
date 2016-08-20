@@ -1,0 +1,14 @@
+{
+	"category" : "SimpleApplescript-Specifications",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ApplescriptSpecification",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
