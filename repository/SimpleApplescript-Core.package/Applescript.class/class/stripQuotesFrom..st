@@ -1,4 +1,4 @@
-scripting
+private
 stripQuotesFrom: aStringReturnedFromApplescript
 
 	aStringReturnedFromApplescript ifEmpty: [ ^ aStringReturnedFromApplescript ].

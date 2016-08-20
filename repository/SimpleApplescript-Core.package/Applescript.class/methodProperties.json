@@ -6,13 +6,12 @@
 		"escapeDoubleQuotesIn:" : "SeanDeNigris 1/6/2012 11:38",
 		"escapeTabsIn:" : "SeanDeNigris 2/24/2012 16:19",
 		"makeSafeForMultiline:" : "SeanDeNigris 2/24/2012 16:37",
-		"processAtom:" : "SeanDeNigris 2/24/2013 21:03",
+		"processAtom:" : "SeanDeNigris 8/7/2014 14:01",
 		"processDate:" : "SeanDeNigris 8/8/2012 10:19",
 		"processList:" : "SeanDeNigris 8/6/2012 18:32",
 		"processRecord:" : "SeanDeNigris 8/8/2012 10:20",
-		"processString:" : "SeanDeNigris 2/24/2013 21:04",
 		"say:" : "SeanDeNigris 2/16/2012 21:56",
-		"smalltalkifyOutput:" : "SeanDeNigris 8/6/2012 18:30",
+		"smalltalkifyOutput:" : "SeanDeNigris 8/7/2014 14:00",
 		"stripQuotesFrom:" : "SeanDeNigris 8/6/2012 19:07" },
 	"instance" : {
 		 } }

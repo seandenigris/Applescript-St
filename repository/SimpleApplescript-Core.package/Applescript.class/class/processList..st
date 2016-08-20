@@ -1,4 +1,4 @@
-scripting
+private
 processList: returnString
 
 	| delimiter item contents listParser result listClose |
