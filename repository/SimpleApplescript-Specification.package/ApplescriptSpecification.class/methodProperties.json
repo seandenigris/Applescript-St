@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testDoIt" : "SeanDeNigris 8/6/2012 16:15",
+		"testDoItError" : "SeanDeNigris 12/6/2011 09:48",
+		"testDoItReturningFalse" : "SeanDeNigris 8/6/2012 16:15",
+		"testDoItReturningString" : "SeanDeNigris 8/6/2012 16:19",
+		"testDoItReturningTrue" : "SeanDeNigris 8/6/2012 16:15" } }
