@@ -1,6 +1,7 @@
 private
 smalltalkifyOutput: aString 
 
-	aString = 'true' ifTrue: [ ^ true ].
-	aString = 'false' ifTrue: [ ^ false ].
-	^ aString.
+	| isList |
+	isList := aString first = ${ and: [ aString last = $} ].
+	isList ifTrue: [ ^ self processList: aString ].
+	^ self processAtom: aString.
