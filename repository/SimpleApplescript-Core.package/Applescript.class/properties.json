@@ -1,0 +1,14 @@
+{
+	"category" : "SimpleApplescript-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "SeanDeNigris 12/6/2011 09:55",
+	"instvars" : [
+		 ],
+	"name" : "Applescript",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

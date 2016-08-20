@@ -1,0 +1,15 @@
+{
+	"category" : "SimpleApplescript-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"recompilableOutput",
+		"scriptSource" ],
+	"name" : "OsaScript",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
