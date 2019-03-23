@@ -1,4 +1,0 @@
-configuration
-recompilableOutput
-
-	recompilableOutput := true.
