@@ -6,7 +6,7 @@ baseline: spec
 		do: [
 			spec
 				baseline: 'PharoEnhancements' with: [
-					spec repository: 'github://seandenigris/Pharo-Enhancements:master/repository' ];
+					spec repository: 'github://seandenigris/Pharo-Enhancements' ];
 				project: 'OSProcess'
 				with: [ spec
 						className: 'ConfigurationOfOSProcess';
