@@ -27,6 +27,13 @@ OsaScript >> initialize [
 
 { #category : #configuration }
 OsaScript >> recompilableOutput [
+	"From the man page:
+		osascript normally prints its results in human-readable form:
+    strings do not have quotes around them, characters are not
+    escaped, braces for lists and records are omitted, etc.  This is
+    generally more useful, but can introduce ambiguities...  To see the results in an unam-
+    biguous form that could be recompiled into the same value, use
+    the s modifier."
 
 	recompilableOutput := true.
 ]

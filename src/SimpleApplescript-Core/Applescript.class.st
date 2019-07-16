@@ -18,6 +18,7 @@ Applescript class >> asOldManSay: aString [
 
 { #category : #scripting }
 Applescript class >> asYoungGirlSay: aString [ 
+	"Example: self asYoungGirlSay: 'Daddy I want a pony'"
 
 	self doIt: 'say ', aString surroundedByDoubleQuotes, ' using "Princess"'.
 ]
@@ -103,7 +104,8 @@ Applescript class >> processString: aString [
 ]
 
 { #category : #scripting }
-Applescript class >> say: aString [ 
+Applescript class >> say: aString [
+	"Example: self say: 'Hello world'"
 
 	self doIt: 'say ', aString surroundedByDoubleQuotes.
 ]
