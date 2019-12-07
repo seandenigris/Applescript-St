@@ -55,8 +55,8 @@ END_S'.
 	process close; closePipes.
 	^ process output trimRight.
 
-	"Implementation note: previously tried using temp files. See Applescript-St/src/SimpleApplescript/Applescript.class.st, removed in commit 8feac02 on 2019-07-16"
-
+	"Implementation note:
+		- Previously tried using temp files. See Applescript-St/src/SimpleApplescript/Applescript.class.st, removed in commit 8feac02 on 2019-07-16. OSShell also tried this approach."
 ]
 
 { #category : #accessing }
