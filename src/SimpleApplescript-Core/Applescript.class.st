@@ -10,20 +10,6 @@ Class {
 }
 
 { #category : #scripting }
-Applescript class >> asOldManSay: aString [
-	"self asOldManSay: 'you damn kids get off my lawn'"
-
-	self doIt: 'say ', aString surroundedByDoubleQuotes, ' using "Bahh"'.
-]
-
-{ #category : #scripting }
-Applescript class >> asYoungGirlSay: aString [ 
-	"Example: self asYoungGirlSay: 'Daddy I want a pony'"
-
-	self doIt: 'say ', aString surroundedByDoubleQuotes, ' using "Princess"'.
-]
-
-{ #category : #scripting }
 Applescript class >> doIt: aString [ 
 
 	| output |
@@ -108,6 +94,19 @@ Applescript class >> say: aString [
 	"Example: self say: 'Hello world'"
 
 	self doIt: 'say ', aString surroundedByDoubleQuotes.
+]
+
+{ #category : #scripting }
+Applescript class >> say: speechString using: voiceName [
+	"
+	voiceName - A system voice installed on your Mac. Not all voices are installed by Default. You can view/add voices in Preferences->Accessibility->Speech
+	
+	Examples: 
+		self say: 'Daddy, I want a pony!' using: 'Princess'.
+		self say: 'You damn kids get off my lawn!' using: 'Bahh'.
+	"
+
+	self doIt: 'say ', speechString surroundedByDoubleQuotes, ' using ', voiceName surroundedByDoubleQuotes.
 ]
 
 { #category : #private }
