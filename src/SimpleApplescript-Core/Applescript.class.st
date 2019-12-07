@@ -127,3 +127,15 @@ Applescript class >> stripQuotesFrom: aStringReturnedFromApplescript [
 		copyFrom: 2
 		to: aStringReturnedFromApplescript size - 1.
 ]
+
+{ #category : #scripting }
+Applescript class >> tell: applicationString to: script [
+	| template fullScript |
+	template := 'tell application "{app}"
+	{script}
+end tell'.
+	fullScript := template format: { 
+		#app -> applicationString.
+		#script -> script } asDictionary.
+	self doIt: fullScript
+]
