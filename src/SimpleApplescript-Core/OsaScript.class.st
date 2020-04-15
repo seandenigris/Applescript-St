@@ -10,6 +10,18 @@ Class {
 	#category : #'SimpleApplescript-Core'
 }
 
+{ #category : #example }
+OsaScript class >> example [
+	<sampleInstance>
+
+	^ OsaScript new
+			target: 'Terminal';
+			source: 'activate
+		do script "{script}"';
+			yourself.
+
+]
+
 { #category : #'as yet unclassified' }
 OsaScript class >> run: aString [
 
@@ -77,7 +89,7 @@ END_S'.
 
 { #category : #accessing }
 OsaScript >> source [
-	^ scriptSource
+	^ scriptSource ifNil: [ scriptSource := '' ]
 ]
 
 { #category : #accessing }
