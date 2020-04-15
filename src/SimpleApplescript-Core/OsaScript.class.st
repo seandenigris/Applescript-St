@@ -3,9 +3,11 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'recompilableOutput',
-		'scriptSource'
+		'target',
+		'scriptSource',
+		'children'
 	],
-	#category : 'SimpleApplescript-Core'
+	#category : #'SimpleApplescript-Core'
 }
 
 { #category : #'as yet unclassified' }
@@ -13,8 +15,9 @@ OsaScript class >> run: aString [
 
 	| command |
 	command := self new
-		script: aString;
-		recompilableOutput.
+		source: aString;
+		isOutputRecompilable;
+		yourself.
 	^ command run.
 ]
 
@@ -26,7 +29,14 @@ OsaScript >> initialize [
 ]
 
 { #category : #configuration }
-OsaScript >> recompilableOutput [
+OsaScript >> isOutputRecompilable [
+	"See setter comment"
+
+	^ recompilableOutput.
+]
+
+{ #category : #configuration }
+OsaScript >> isOutputRecompilable: aBoolean [
 	"From the man page:
 		osascript normally prints its results in human-readable form:
     strings do not have quotes around them, characters are not
@@ -35,13 +45,23 @@ OsaScript >> recompilableOutput [
     biguous form that could be recompiled into the same value, use
     the s modifier."
 
-	recompilableOutput := true.
+	recompilableOutput := aBoolean.
 ]
 
 { #category : #'as yet unclassified' }
 OsaScript >> run [
 
-	| process commandTemplate flags commandString |
+	| process |
+	process := PipeableOSProcess waitForCommand: self runCommand.
+	process succeeded ifFalse: [ self error: process errorUpToEndOfFile ].
+	process close; closePipes.
+	^ process output trimRight.
+]
+
+{ #category : #'as yet unclassified' }
+OsaScript >> runCommand [
+
+	| commandTemplate flags commandString |
 	commandTemplate := '/usr/bin/osascript {1} <<END_S
 {2}
 END_S'.
@@ -49,18 +69,36 @@ END_S'.
 		ifTrue: [ '-ss' ]
 		ifFalse: [ '' ].
 	commandString := commandTemplate format: { flags. scriptSource }.
-	commandString := commandString copyReplaceAll: Character cr asString with: Character lf asString.
-	process := PipeableOSProcess waitForCommand: commandString.
-	process succeeded ifFalse: [ self error: process errorUpToEndOfFile ].
-	process close; closePipes.
-	^ process output trimRight.
+	^ commandString copyReplaceAll: Character cr asString with: Character lf asString.
 
 	"Implementation note:
 		- Previously tried using temp files. See Applescript-St/src/SimpleApplescript/Applescript.class.st, removed in commit 8feac02 on 2019-07-16. OSShell also tried this approach."
 ]
 
 { #category : #accessing }
-OsaScript >> script: aString [ 
+OsaScript >> source [
+	^ scriptSource
+]
 
-	scriptSource := aString.
+{ #category : #accessing }
+OsaScript >> source: aString [
+	scriptSource := aString
+]
+
+{ #category : #'as yet unclassified' }
+OsaScript >> target: applicationName [
+	target := applicationName
+]
+
+{ #category : #scripting }
+OsaScript >> tell: applicationString to: script [
+	"Limitation: currently one 'tell' per script"
+	| template tellScript |
+	template := 'tell application "{app}"
+	{script}
+end tell'.
+	tellScript := template format: { 
+		#app -> applicationString.
+		#script -> script } asDictionary.
+	self source: self source, Character lf asString, tellScript
 ]
