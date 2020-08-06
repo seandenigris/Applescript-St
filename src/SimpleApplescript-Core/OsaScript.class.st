@@ -63,11 +63,7 @@ OsaScript >> isOutputRecompilable: aBoolean [
 { #category : #'as yet unclassified' }
 OsaScript >> run [
 
-	| process |
-	process := PipeableOSProcess waitForCommand: self runCommand.
-	process succeeded ifFalse: [ self error: process errorUpToEndOfFile ].
-	process close; closePipes.
-	^ process output trimRight.
+	^ Smalltalk tools shell new outputOf: self runCommand.
 ]
 
 { #category : #'as yet unclassified' }
