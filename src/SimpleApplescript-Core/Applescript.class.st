@@ -6,7 +6,7 @@ I am a bare-bones replacement for the class of the same name in the Applescript 
 Class {
 	#name : #Applescript,
 	#superclass : #Object,
-	#category : 'SimpleApplescript-Core'
+	#category : #'SimpleApplescript-Core'
 }
 
 { #category : #scripting }
@@ -115,7 +115,7 @@ Applescript class >> smalltalkifyOutput: aString [
 	| isList |
 	isList := aString isEmpty not and: [ aString first = ${ and: [ aString last = $} ] ].
 	isList ifTrue: [ ^ self processList: aString ].
-	^ self processAtom: aString.
+	^ self processAtom: aString trimRight.
 ]
 
 { #category : #private }
