@@ -48,6 +48,7 @@ Applescript class >> processAtom: aString [
 	(aString beginsWith: 'date ') ifTrue: [ ^ self processDate: aString ].
 	isApplescriptString := aString isEmpty not and: [ aString first = $" and: [ aString last = $" ] ].
 	isApplescriptString ifTrue: [ ^ self processString: aString ].
+	(NumberParser isNumber: aString) ifTrue: [ ^ aString asNumber ].
 	^ ApplescriptReference on: aString.
 ]
 
