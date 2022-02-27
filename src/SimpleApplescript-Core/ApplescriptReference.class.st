@@ -4,13 +4,18 @@ Class {
 	#instVars : [
 		'string'
 	],
-	#category : 'SimpleApplescript-Core'
+	#category : #'SimpleApplescript-Core'
 }
 
 { #category : #'instance creation' }
 ApplescriptReference class >> on: aString [
 
 	^ self new string: aString.
+]
+
+{ #category : #accessing }
+ApplescriptReference >> string [
+	^ string
 ]
 
 { #category : #'as yet unclassified' }
