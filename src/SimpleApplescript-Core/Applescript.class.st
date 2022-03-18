@@ -31,6 +31,18 @@ Applescript class >> escapeTabsIn: aString [
 	^ aString copyWithout: Character tab.
 ]
 
+{ #category : #accessing }
+Applescript class >> exampleError [
+	<gtExample>
+	
+	^ self 
+		given: []
+		when: [ self doIt: 'error "oops"' ]
+		then: [ :result |
+			result message should equal: 'oops'.
+			result number should equal: 2700. "the default" ]
+]
+
 { #category : #private }
 Applescript class >> makeSafeForMultiline: aString [
 
@@ -49,6 +61,7 @@ Applescript class >> processAtom: aString [
 	isApplescriptString := aString isEmpty not and: [ aString first = $" and: [ aString last = $" ] ].
 	isApplescriptString ifTrue: [ ^ self processString: aString ].
 	(NumberParser isNumber: aString) ifTrue: [ ^ aString asNumber ].
+	(AsError isClassFor: aString) ifTrue: [ ^ AsError fromString: aString ].
 	^ ApplescriptReference on: aString.
 ]
 
@@ -137,5 +150,5 @@ end tell'.
 	fullScript := template format: { 
 		#app -> applicationString.
 		#script -> script } asDictionary.
-	self doIt: fullScript
+	^ self doIt: fullScript
 ]

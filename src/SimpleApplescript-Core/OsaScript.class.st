@@ -5,7 +5,8 @@ Class {
 		'recompilableOutput',
 		'target',
 		'scriptSource',
-		'children'
+		'children',
+		'errorsToStdout'
 	],
 	#category : #'SimpleApplescript-Core'
 }
@@ -22,29 +23,40 @@ OsaScript class >> example [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 OsaScript class >> run: aString [
 
 	| command |
 	command := self new
 		source: aString;
-		isOutputRecompilable;
 		yourself.
 	^ command run.
 ]
 
-{ #category : #'as yet unclassified' }
-OsaScript >> initialize [
+{ #category : #configuration }
+OsaScript >> errorsToStdout [
+	"See setter comment"
 
-	super initialize.
-	recompilableOutput := false.
+	^ errorsToStdout ifNil: [ true ].
+]
+
+{ #category : #configuration }
+OsaScript >> errorsToStdout: aBoolean [
+	"From the man page:
+		osascript normally prints script errors to stderr, so downstream
+              clients only see valid results.  When running automated tests,
+              however, using the o modifier lets you distinguish script errors,
+              which you care about matching, from other diagnostic output, which
+              you don't."
+
+	errorsToStdout := aBoolean.
 ]
 
 { #category : #configuration }
 OsaScript >> isOutputRecompilable [
 	"See setter comment"
 
-	^ recompilableOutput.
+	^ recompilableOutput ifNil: [ true ].
 ]
 
 { #category : #configuration }
@@ -66,20 +78,26 @@ OsaScript >> run [
 	^ Smalltalk tools shell new outputOf: self runCommand.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 OsaScript >> runCommand [
 
-	| commandTemplate flags commandString |
+	| commandTemplate flags commandString hasFlags |
 	commandTemplate := '/usr/bin/osascript {1} <<END_S
 {2}
 END_S'.
-	flags := recompilableOutput
-		ifTrue: [ '-ss' ]
+	hasFlags := self isOutputRecompilable or: [ self errorsToStdout ].
+	flags := hasFlags
+		ifTrue: [ 
+			String streamContents: [ :fstr |
+				fstr << '-s'.
+				self isOutputRecompilable ifTrue: [ fstr << 's' ].
+				self errorsToStdout ifTrue: [ fstr << 'o' ] ] ]
 		ifFalse: [ '' ].
 	commandString := commandTemplate format: { flags. scriptSource }.
-	^ commandString copyReplaceAll: Character cr asString with: Character lf asString.
+	^ commandString withUnixLineEndings.
 
 	"Implementation note:
+		- Adapted from https://apple.stackexchange.com/a/141721/9507. Didn't work without changing to Unix line endings, probably related to the HEREDOC
 		- Previously tried using temp files. See Applescript-St/src/SimpleApplescript/Applescript.class.st, removed in commit 8feac02 on 2019-07-16. OSShell also tried this approach."
 ]
 
