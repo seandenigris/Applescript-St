@@ -5,16 +5,19 @@ I am a bare-bones replacement for the class of the same name in the Applescript 
 "
 Class {
 	#name : #Applescript,
-	#superclass : #Object,
+	#superclass : #SuRunnable,
+	#instVars : [
+		'targetApplication'
+	],
 	#category : #'SimpleApplescript-Core'
 }
 
 { #category : #scripting }
 Applescript class >> doIt: aString [ 
 
-	| output |
-	output := OsaScript run: aString.
-	^ self smalltalkifyOutput: output.
+	^ self new
+		template: aString;
+		output
 
 ]
 
@@ -43,64 +46,23 @@ Applescript class >> exampleError [
 			result number should equal: 2700. "the default" ]
 ]
 
+{ #category : #examples }
+Applescript class >> exampleTell [
+	<gtExample>
+	
+	^ self 
+		given: []
+		when: [ self tell: 'Safari' to: 'get name' ]
+		then: [ :result |
+			result should equal: 'Safari' ]
+]
+
 { #category : #private }
 Applescript class >> makeSafeForMultiline: aString [
 
 	| tabsEscaped |
 	tabsEscaped := self escapeTabsIn: aString.
 	^ self escapeDoubleQuotesIn: tabsEscaped.
-]
-
-{ #category : #private }
-Applescript class >> processAtom: aString [
-
-	| isApplescriptString |
-	aString = 'true' ifTrue: [ ^ true ].
-	aString = 'false' ifTrue: [ ^ false ].
-	(aString beginsWith: 'date ') ifTrue: [ ^ self processDate: aString ].
-	isApplescriptString := aString isEmpty not and: [ aString first = $" and: [ aString last = $" ] ].
-	isApplescriptString ifTrue: [ ^ self processString: aString ].
-	(NumberParser isNumber: aString) ifTrue: [ ^ aString asNumber ].
-	(AsError isClassFor: aString) ifTrue: [ ^ AsError fromString: aString ].
-	^ ApplescriptReference on: aString.
-]
-
-{ #category : #private }
-Applescript class >> processDate: aString [ 
-
-	| dateString weekdayStripped |
-	dateString := aString copyFrom: 7 to: aString size - 1.
-	weekdayStripped := dateString copyAfter: Character space.
-	^ weekdayStripped asDateAndTime.
-]
-
-{ #category : #private }
-Applescript class >> processList: returnString [
-
-	| delimiter item contents listParser result listClose |
-	delimiter := ', ' asParser.
-	listClose := $} asParser.
-	item := (delimiter / listClose) negate plus flatten.
-	contents := (item separatedBy: delimiter) ==> [ :nodes | nodes reject: [ :n | n = ', ' ] ].
-	listParser := ${ asParser, contents optional, listClose ==> #second.
-	result := listParser parse: returnString.
-	^ result isNil
-		ifTrue: [ OrderedCollection new ]
-		ifFalse: [ result collect: [ :e | self smalltalkifyOutput: e ] ].
-]
-
-{ #category : #private }
-Applescript class >> processRecord: aString [ 
-	'{who:"Matt", town:"Ojai"}'.
-	self shouldBeImplemented.
-]
-
-{ #category : #private }
-Applescript class >> processString: aString [ 
-
-	| rawString |
-	rawString := self stripQuotesFrom: aString.
-	^ rawString copyReplaceAll: '\"' with: '"'.
 ]
 
 { #category : #scripting }
@@ -123,8 +85,82 @@ Applescript class >> say: speechString using: voiceName [
 	self doIt: 'say ', speechString surroundedByDoubleQuotes, ' using ', voiceName surroundedByDoubleQuotes.
 ]
 
+{ #category : #scripting }
+Applescript class >> tell: applicationString to: script [
+	^ self new
+		targetApplication: applicationString;
+		template: script;
+		output
+]
+
+{ #category : #scripting }
+Applescript >> output [
+
+	| output |
+	output := OsaScript run: self string.
+	^ self smalltalkifyOutput: output.
+]
+
 { #category : #private }
-Applescript class >> smalltalkifyOutput: aString [ 
+Applescript >> processAtom: aString [
+
+	| isApplescriptString |
+	aString = 'true' ifTrue: [ ^ true ].
+	aString = 'false' ifTrue: [ ^ false ].
+	(aString beginsWith: 'date ') ifTrue: [ ^ self processDate: aString ].
+	isApplescriptString := aString isEmpty not and: [ aString first = $" and: [ aString last = $" ] ].
+	isApplescriptString ifTrue: [ ^ self processString: aString ].
+	(NumberParser isNumber: aString) ifTrue: [ ^ aString asNumber ].
+	(AsError isClassFor: aString) ifTrue: [ ^ AsError fromString: aString ].
+	^ ApplescriptReference on: aString.
+]
+
+{ #category : #private }
+Applescript >> processDate: aString [ 
+
+	| dateString weekdayStripped |
+	dateString := aString copyFrom: 7 to: aString size - 1.
+	weekdayStripped := dateString copyAfter: Character space.
+	^ weekdayStripped asDateAndTime.
+]
+
+{ #category : #private }
+Applescript >> processList: returnString [
+
+	| delimiter item contents listParser result listClose |
+	delimiter := ', ' asParser.
+	listClose := $} asParser.
+	item := (delimiter / listClose) negate plus flatten.
+	contents := (item separatedBy: delimiter) ==> [ :nodes | nodes reject: [ :n | n = ', ' ] ].
+	listParser := ${ asParser, contents optional, listClose ==> #second.
+	result := listParser parse: returnString.
+	^ result isNil
+		ifTrue: [ OrderedCollection new ]
+		ifFalse: [ result collect: [ :e | self smalltalkifyOutput: e ] ].
+]
+
+{ #category : #private }
+Applescript >> processRecord: aString [ 
+	'{who:"Matt", town:"Ojai"}'.
+	self shouldBeImplemented.
+]
+
+{ #category : #private }
+Applescript >> processString: aString [ 
+
+	| rawString |
+	rawString := self stripQuotesFrom: aString.
+	^ rawString copyReplaceAll: '\"' with: '"'.
+]
+
+{ #category : #scripting }
+Applescript >> run [
+
+	^ self output
+]
+
+{ #category : #private }
+Applescript >> smalltalkifyOutput: aString [ 
 
 	| isList |
 	isList := aString isEmpty not and: [ aString first = ${ and: [ aString last = $} ] ].
@@ -132,8 +168,25 @@ Applescript class >> smalltalkifyOutput: aString [
 	^ self processAtom: aString trimRight.
 ]
 
+{ #category : #accessing }
+Applescript >> string [
+	
+	^ String streamContents: [ :str |
+		self targetApplication 
+			ifNotNil: [ :target | 
+				str << 'tell application "' << target << '"'.
+				str lf; lf ].
+			
+		str << self basicCommandString.
+		
+		self targetApplication ifNotNil: [ 
+			str
+				lf; lf;
+				nextPutAll: 'end tell' ] ].
+]
+
 { #category : #private }
-Applescript class >> stripQuotesFrom: aStringReturnedFromApplescript [
+Applescript >> stripQuotesFrom: aStringReturnedFromApplescript [
 
 	aStringReturnedFromApplescript ifEmpty: [ ^ aStringReturnedFromApplescript ].
 	^ aStringReturnedFromApplescript
@@ -141,14 +194,21 @@ Applescript class >> stripQuotesFrom: aStringReturnedFromApplescript [
 		to: aStringReturnedFromApplescript size - 1.
 ]
 
-{ #category : #scripting }
-Applescript class >> tell: applicationString to: script [
-	| template fullScript |
-	template := 'tell application "{app}"
-	{script}
+{ #category : #accessing }
+Applescript >> targetApplication [
+
+	^ targetApplication
+]
+
+{ #category : #accessing }
+Applescript >> targetApplication: anObject [
+
+	targetApplication := anObject
+]
+
+{ #category : #accessing }
+Applescript >> tell: aString [
+	self template: 'tell application "', aString, '"
+	', template, '
 end tell'.
-	fullScript := template format: { 
-		#app -> applicationString.
-		#script -> script } asDictionary.
-	^ self doIt: fullScript
 ]

@@ -14,10 +14,12 @@ BaselineOfSimpleApplescript >> baseline: spec [
 				baseline: 'PharoEnhancements' with: [
 					spec repository: 'github://seandenigris/Pharo-Enhancements' ];
 				baseline: 'OSShell' with: [
-				spec repository: 'github://seandenigris/Pharo-Shell' ].
+				spec repository: 'github://seandenigris/Pharo-Shell' ];
+				baseline: 'Superuser' with: [
+				spec repository: 'github://seandenigris/Superuser' ].
 			spec
 				package: 'SimpleApplescript-Core'
-					with: [ spec requires: #('OSShell' 'PharoEnhancements') ];
+					with: [ spec requires: #('OSShell' 'PharoEnhancements' 'Superuser') ];
 				package: 'SimpleApplescript-Specification'
 					with: [ spec requires: #('SimpleApplescript-Core') ].
 			spec group: 'Core' with: #('SimpleApplescript-Core') ]
