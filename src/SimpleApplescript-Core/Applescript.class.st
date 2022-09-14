@@ -208,7 +208,5 @@ Applescript >> targetApplication: anObject [
 
 { #category : #accessing }
 Applescript >> tell: aString [
-	self template: 'tell application "', aString, '"
-	', template, '
-end tell'.
+	self targetApplication: aString
 ]
