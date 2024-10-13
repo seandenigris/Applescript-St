@@ -128,11 +128,11 @@ Applescript >> processDate: aString [
 Applescript >> processList: returnString [
 
 	| delimiter item contents listParser result listClose |
-	delimiter := ', ' asParser.
-	listClose := $} asParser.
+	delimiter := ', ' asPParser.
+	listClose := $} asPParser.
 	item := (delimiter / listClose) negate plus flatten.
 	contents := (item separatedBy: delimiter) ==> [ :nodes | nodes reject: [ :n | n = ', ' ] ].
-	listParser := ${ asParser, contents optional, listClose ==> #second.
+	listParser := ${ asPParser, contents optional, listClose ==> #second.
 	result := listParser parse: returnString.
 	^ result isNil
 		ifTrue: [ OrderedCollection new ]
