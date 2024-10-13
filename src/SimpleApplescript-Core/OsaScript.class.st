@@ -6,7 +6,8 @@ Class {
 		'target',
 		'scriptSource',
 		'children',
-		'errorsToStdout'
+		'errorsToStdout',
+		'language'
 	],
 	#category : #'SimpleApplescript-Core'
 }
@@ -31,6 +32,12 @@ OsaScript class >> run: aString [
 		source: aString;
 		yourself.
 	^ command run.
+]
+
+{ #category : #'as yet unclassified' }
+OsaScript >> beJavaScript [
+
+	self language: 'JavaScript'
 ]
 
 { #category : #configuration }
@@ -72,6 +79,16 @@ OsaScript >> isOutputRecompilable: aBoolean [
 	recompilableOutput := aBoolean.
 ]
 
+{ #category : #accessing }
+OsaScript >> language [
+	^ language
+]
+
+{ #category : #accessing }
+OsaScript >> language: anObject [
+	language := anObject
+]
+
 { #category : #'as yet unclassified' }
 OsaScript >> run [
 
@@ -81,10 +98,13 @@ OsaScript >> run [
 { #category : #accessing }
 OsaScript >> runCommand [
 
-	| commandTemplate flags commandString hasFlags |
-	commandTemplate := '/usr/bin/osascript {1} <<END_S
-{2}
+	| commandTemplate flags commandString hasFlags languageArg |
+	commandTemplate := '/usr/bin/osascript {language} {flags} <<END_S
+{scriptSource}
 END_S'.
+	languageArg := self language
+		ifNil: [ '' ]
+		ifNotNil: [ :lang | '-l ', lang ].
 	hasFlags := self isOutputRecompilable or: [ self errorsToStdout ].
 	flags := hasFlags
 		ifTrue: [ 
@@ -93,7 +113,10 @@ END_S'.
 				self isOutputRecompilable ifTrue: [ fstr << 's' ].
 				self errorsToStdout ifTrue: [ fstr << 'o' ] ] ]
 		ifFalse: [ '' ].
-	commandString := commandTemplate format: { flags. scriptSource }.
+	commandString := commandTemplate format: { 
+		#language -> languageArg.
+		#flags -> flags.
+		#scriptSource -> scriptSource } asDictionary.
 	^ commandString withUnixLineEndings.
 
 	"Implementation note:
