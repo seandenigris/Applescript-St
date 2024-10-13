@@ -13,6 +13,14 @@ ApplescriptReference class >> on: aString [
 	^ self new string: aString.
 ]
 
+{ #category : #'as yet unclassified' }
+ApplescriptReference >> get: aString via: applicationString [
+
+	^ Applescript 
+		tell: applicationString
+		to: 'get ', aString, ' of ', self string
+]
+
 { #category : #accessing }
 ApplescriptReference >> string [
 	^ string
