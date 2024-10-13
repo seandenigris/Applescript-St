@@ -98,7 +98,7 @@ Applescript >> output [
 
 	| output |
 	output := OsaScript run: self string.
-	^ self smalltalkifyOutput: output.
+	^ self smalltalkifyOutput: output trimmed.
 ]
 
 { #category : #private }
