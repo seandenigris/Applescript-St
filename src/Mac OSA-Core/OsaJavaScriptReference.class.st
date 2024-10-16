@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'string'
 	],
-	#category : #'SimpleApplescript-Core'
+	#category : #'Mac OSA-Core'
 }
 
 { #category : #'instance creation' }

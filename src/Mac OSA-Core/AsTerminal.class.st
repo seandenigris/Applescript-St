@@ -1,7 +1,7 @@
 Class {
 	#name : #AsTerminal,
 	#superclass : #Object,
-	#category : #'SimpleApplescript-Core'
+	#category : #'Mac OSA-Core'
 }
 
 { #category : #preferences }

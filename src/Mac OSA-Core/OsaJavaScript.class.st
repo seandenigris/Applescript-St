@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'targetApplication'
 	],
-	#category : #'SimpleApplescript-Core'
+	#category : #'Mac OSA-Core'
 }
 
 { #category : #scripting }

@@ -14,14 +14,51 @@ With AS, osascript does not encode newlines as \n so seemingly would be more str
 "
 Class {
 	#name : #OsaMacMailMessage,
-	#superclass : #OsaJavaScriptReference,
-	#category : #'SimpleApplescript-Core-Mail'
+	#superclass : #Object,
+	#instVars : [
+		'id',
+		'mailboxName',
+		'accountID'
+	],
+	#category : #'Mac OSA-Core-Mail'
 }
+
+{ #category : #'as yet unclassified' }
+OsaMacMailMessage class >> fromString: aString [
+
+	| template |
+	template := 'Application("Mail").accounts.byId("{accountID}").mailboxes.byName("{mailboxName}").messages.byId({ID})'.
+	^ template format: {
+		#ID -> self id asString.
+		#mailboxName -> self mailboxName.
+		#accountID -> self accountID } asDictionary.
+]
 
 { #category : #testing }
 OsaMacMailMessage class >> isClassFor: aString [
 
 	^ 'Application\("Mail"\)\..*\.messages\.byId\(\d+\)' asRegex matches: aString
+]
+
+{ #category : #accessing }
+OsaMacMailMessage >> accountID [
+	^ accountID
+]
+
+{ #category : #accessing }
+OsaMacMailMessage >> accountID: anObject [
+	accountID := anObject
+]
+
+{ #category : #'as yet unclassified' }
+OsaMacMailMessage >> appleScriptReferenceString [
+
+	| template |
+	template := 'first message of mailbox "{mailboxName}" of account id "{accountID}" of application "Mail" whose id is {ID}'.
+	^ template format: {
+		#ID -> self id asString.
+		#mailboxName -> self mailboxName.
+		#accountID -> self accountID } asDictionary.
 ]
 
 { #category : #'as yet unclassified' }
@@ -37,6 +74,37 @@ OsaMacMailMessage >> exported [
 OsaMacMailMessage >> filenameForExport [
 
 	^ (self dateReceived asFileNameCompatibleString, '_', self subject) asFilename, '.eml'
+]
+
+{ #category : #accessing }
+OsaMacMailMessage >> id [
+	^ id
+]
+
+{ #category : #accessing }
+OsaMacMailMessage >> id: anObject [
+	id := anObject
+]
+
+{ #category : #'as yet unclassified' }
+OsaMacMailMessage >> javaScriptReferenceString [
+
+	| template |
+	template := 'Application("Mail").accounts.byId("{accountID}").mailboxes.byName("{mailboxName}").messages.byId({ID})'.
+	^ template format: {
+		#ID -> self id asString.
+		#mailboxName -> self mailboxName.
+		#accountID -> self accountID } asDictionary.
+]
+
+{ #category : #accessing }
+OsaMacMailMessage >> mailboxName [
+	^ mailboxName
+]
+
+{ #category : #accessing }
+OsaMacMailMessage >> mailboxName: anObject [
+	mailboxName := anObject
 ]
 
 { #category : #'as yet unclassified' }

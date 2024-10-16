@@ -5,7 +5,7 @@ Class {
 		'message',
 		'number'
 	],
-	#category : #'SimpleApplescript-Core'
+	#category : #'Mac OSA-Core'
 }
 
 { #category : #private }

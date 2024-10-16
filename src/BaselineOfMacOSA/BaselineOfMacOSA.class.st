@@ -1,11 +1,11 @@
 Class {
-	#name : #BaselineOfSimpleApplescript,
+	#name : #BaselineOfMacOSA,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfSimpleApplescript
+	#category : #BaselineOfMacOSA
 }
 
 { #category : #baseline }
-BaselineOfSimpleApplescript >> baseline: spec [
+BaselineOfMacOSA >> baseline: spec [
 	<baseline>
 	spec
 		for: #common
@@ -18,9 +18,9 @@ BaselineOfSimpleApplescript >> baseline: spec [
 				baseline: #'Superuser' with: [
 				spec repository: 'github://seandenigris/Superuser' ].
 			spec
-				package: #'SimpleApplescript-Core'
+				package: #'Mac OSA-Core'
 					with: [ spec requires: #(OSShell PharoEnhancements Superuser) ];
-				package: #'SimpleApplescript-Specification'
-					with: [ spec requires: #(#'SimpleApplescript-Core') ].
-			spec group: #'Core' with: #(#'SimpleApplescript-Core') ]
+				package: #'Mac OSA-Specification'
+					with: [ spec requires: #(#'Mac OSA-Core') ].
+			spec group: #'Core' with: #(#'Mac OSA-Core') ]
 ]

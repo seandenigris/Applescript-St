@@ -1,7 +1,7 @@
 Class {
 	#name : #ApplescriptSpecification,
 	#superclass : #TestCase,
-	#category : 'SimpleApplescript-Specification'
+	#category : #'Mac OSA-Specification'
 }
 
 { #category : #tests }
