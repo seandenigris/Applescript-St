@@ -79,7 +79,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-12T23:20:30.972044-04:00"
+									"dateAndTimeString" : "2024-10-12T23:20:56.826104-04:00"
 								}
 							},
 							"uid" : {
@@ -89,7 +89,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "[bru6.de](https://bru6.de/jxa/)"
 						}
 					]
 				},

@@ -7,7 +7,7 @@
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "JavaScript for Automation"
+		"title" : "JavaScript for Automation (JXA)"
 	},
 	"children" : {
 		"__type" : "snippets",
@@ -182,7 +182,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-10-12T23:19:21.283217-04:00"
+			"dateAndTimeString" : "2024-10-14T20:17:41.945666-04:00"
 		}
 	}
 }
