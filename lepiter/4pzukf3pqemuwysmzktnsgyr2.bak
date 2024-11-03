@@ -16,158 +16,9 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T20:16:44.920754-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T20:19:21.520417-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "yr/7mtrgDQC/d8tTBBXDTw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Apple's two official scripting bridges - Applescript and [[JavaScript for Automation (JXA)]] are problematic and not recommended."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-14T21:02:26.868489-04:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-14T21:02:33.210316-04:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "IoZqPtvgDQCQRK2dBBXDTw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "hhas"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-14T21:02:35.031508-04:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-14T21:02:35.031508-04:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "8BXnPtvgDQCQXy7sBBXDTw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : ""
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-14T21:02:12.324749-04:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-14T21:02:17.499365-04:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "o5uMPdvgDQCP+HYOBBXDTw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "JavaScript:"
-						},
-						{
-							"__type" : "textSnippet",
+							"__type" : "quCitedTextSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -180,7 +31,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-14T20:25:43.772653-04:00"
+									"dateAndTimeString" : "2024-11-03T11:31:11.049978-05:00"
 								}
 							},
 							"editEmail" : {
@@ -191,17 +42,340 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-14T21:01:28.44953-04:00"
+									"dateAndTimeString" : "2024-11-03T11:37:07.12115-05:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "//MZu9rgDQCIWLuEBBXDTw=="
+								"uidString" : "tDPSbmbiDQCRH4S4B38y7A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "ObjC: Scripting Bridge from Apple is apparently problematic"
+							"string" : "\"The key to understanding Apple event IPC automation and using it effectively is realizing it is not OOP; it is RPC plus simple first-class relational queries! The IPC system’s design and much of its behavior derives from SQL and RDBMSes, only manipulating a tree-like data graph instead of rectangular tables. If you assume it is DOM and try to treat it like that (as JXA wrongly did) you will only confuse and frustrate yourself, and your code’s performance will likely suck.\n\nThere’s some explanation of this in the nodeautomation documentation (AppleScript’s docs totally ignore this and JXA’s are outright misleading). For a more general understanding of the “Why?”, Dr William Cook’s paper on [AppleScript’s development](http://www.cs.utexas.edu/~wcook/Drafts/2006/ashopl.pdf) is a proper good eyeopener…\n\nDr Cook’s paper explains the original motivation for using coarse-grained high-level queries (a-la SQL) instead of fine-grained low-level message passing (c.f. DCOM, CORBA, etc). While Mac OS X eliminated the original System 7 performance bottleneck, even now as an inter-process communication strategy it makes a lot of sense, from a high-level UI/UX perspective as much as “API” design.\n\nThe #1 reason programmers almost universally despise AppleScript is because they see its OOP-like syntax and (wrongly) assume it’s OOP/DOM. When they subsequently see AS behaving in profoundly *non-*OO ways, they are confused and frustrated by this mismatch between what they expected and what they actually get. This is a huge same: when programmers actually “get” Apple event IPC, they (mostly) love it and can build truly amazing things with it. Alas, Apple’s early mismanagement of AppleScript pissed off its original designers into quitting, and with no-one left who fully understood the technology, there was nobody to document or explain it accurately to programmers in language they could understand. Thus these misconceptions abound.\n\n(Ironically, non-programmers don’t have nearly so much trouble: coming to Applescript without any prior assumptions, they simply accept it for what it is.)\n\nOnce you understand how Apple event automation really works, and why it works they way it does, it actually makes good sense. It still has warts (the biggest of which is being buried under AppleScript’s horridly confusing syntactic sugar) but it is remarkably powerful, elegant, and accessible. I’ve built some of the most advanced [graphics automation](https://www.youtube.com/channel/UC-X4kVdvXtR7ydKHnRg8m8Q/videos) on the planet, and I did it all using Apple event IPC (Python3+appscript driving Adobe Illustrator), and it just blows away everything else on the planet in terms of ease and speed of development.\n\nIronically, with Siri voice control seeking to open up automation to ordinary end-users, having high-level query engines already built into hundreds of apps should be an absolute goldmine ready to exploit. Alas, with no-one left at Apple who understands or cares for the technology, the whole stack and its ecosystem have been abandoned to rot. Siri Shortcuts may offer only a fraction of the power while simultaneously tying its users into knots as soon as they attempt anything non-trivial, but it’s clear Apple sees that as the future now. Certainly they can’t do a worse job of getting developers behind it.\"",
+							"sourceID" : {
+								"__type" : "uuid",
+								"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+							}
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:17:39.625723-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:18:41.95119-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "8dh0PmbiDQCHh5xHB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "\"murdered by Apple repeatedly shackling it to garbage and then leaving it to rot. (I actually [fixed](https://appscript.sourceforge.io/) that problem 15 years ago, until the Mac Automation team wrecked it again. Still salty.)\"",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									},
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:16:38.031153-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:17:02.582443-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "I/XIOmbiDQCHPR3dB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "\"legitimately awesome—vastly superior technology to anything Shortcuts or any other platforms offer\"",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									},
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:16:09.948724-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:17:38.786685-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "y3wcOWbiDQCGrVs2B38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "\"mouldering in maintenance mode since (its only growing market nowadays is in malware)\"",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:30:47.836193-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:31:00.52813-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m/dvbWbiDQCQkUlkB38y7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Health / Future Prospects"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:15:47.15895-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:16:05.225288-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "5rrAN2biDQCGpK/ZB38y7A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Apple event/Open Scripting Architecture"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "quCitedTextSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:38:45.799301-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:38:51.229664-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cB/tiWbiDQCRqNhSB38y7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "ALL high-level Apple event bridges are “wrappers”, including AppleScript’s. Powerful as it is, calling the Apple Event Manager’s low-level C API directly is not for faint of heart. It requires a good high-level wrapper to make it simple and easy to use.\n\nWhat distinguishes the good AE bridges from bad is that good AE bridges preserve Apple events’ powerful RPC+query semantics and expose them as-is, whereas the bad insist on shoehorning AEs into crippled OOP semantics—and then, when stuff inevitably breaks, declare “too bad” and hang their unfortunate users out. That’s not the technology’s fault though; that’s just bad programming by arrogant/ignorant programmers thinking they know better (they don’t).",
+							"sourceID" : {
+								"__type" : "uuid",
+								"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+							}
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:25:35.37336-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:29:20.542771-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "NC7QWmbiDQCNVnbBB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "\"Slow but simplest\"",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:25:04.009629-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:25:33.177495-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "T5rxWGbiDQCLU7KIB38y7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "`osascript` can be used from any other language that can run shell commands"
 						},
 						{
 							"__type" : "textSnippet",
@@ -233,7 +407,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-14T22:19:33.912656-04:00"
+												"dateAndTimeString" : "2024-10-14T22:19:38.036469-04:00"
 											}
 										},
 										"uid" : {
@@ -243,7 +417,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The gold standard is [appscript](https://appscript.sourceforge.io/index.html) by Hamish Sanderson. See the excellentWhile officially unsupported, it has continued to work for years. Matt Neuburg did this great [tutorial](http://www.apeth.com/rbappscript/00intro.html#toc)."
+										"string" : "The gold standard is [appscript](https://appscript.sourceforge.io/index.html) by Hamish Sanderson. See the excellent [documentation](https://appscript.sourceforge.io/py-appscript/doc_3x/appscript-manual/index.html). While officially unsupported, it has continued to work for years. Matt Neuburg did this great [tutorial](http://www.apeth.com/rbappscript/00intro.html#toc)."
 									},
 									{
 										"__type" : "textSnippet",
@@ -270,7 +444,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-14T20:58:50.27319-04:00"
+												"dateAndTimeString" : "2024-11-03T11:42:22.30575-05:00"
 											}
 										},
 										"uid" : {
@@ -280,7 +454,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[PyXA](https://github.com/SKaplanOfficial/PyXA) to be a simpler, more Python friendly bridge, that covers common cases and applications"
+										"string" : "[PyXA](https://github.com/SKaplanOfficial/PyXA) claims to be a simpler, more Python friendly bridge, that covers common cases and applications"
 									}
 								]
 							},
@@ -319,6 +493,167 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:29:44.330825-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:29:44.330825-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "jvemaWbiDQCPhoDAB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "\"works about as well as AppleScript.\"",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									},
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:30:02.878954-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:30:02.878954-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "If3BambiDQCQP6pwB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Support: \"Caveat emptor: no warranty or guarantee of fitness and I do not provide [free unpaid] support, but as long as I need nodeautomation for my own work I will continue to maintain it.",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									},
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:28:44.445903-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:30:16.457761-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "HzMVZmbiDQCPTEn/B38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : " Documentation: \"not great (still better than JXA’s though)\" and the accompanying ASDictionary and ASTranslate tools answer most of the practical “How do I…” questions when translating application commands from AppleScript to the equivalent JS syntax.",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:28:01.970621-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:42:07.662674-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rA+NY2biDQCOggkOB38y7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "node.js - nodeautomation"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
 								"items" : [ ]
 							},
 							"createEmail" : {
@@ -351,6 +686,429 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Ruby: [rb-scpt](https://github.com/BrendanThompson/rb-scpt), a Ruby-only fork of the above project, because its rb-appscript is no longer maintained."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "quCitedTextSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:26:38.178274-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:29:17.998867-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "4IGOXmbiDQCNZdd9B38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "\"allow[s] you to pass complex values and call multiple AS handlers directly.\"",
+										"sourceID" : {
+											"__type" : "uuid",
+											"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+										}
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:26:41.602467-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:27:44.654066-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "DLjCXmbiDQCNbnjqB38y7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[AppleScript-ObjC bridge](https://appscript.sourceforge.io/asoc.html) - accessible via ObjC and languages with ObjC bridges"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "quCitedTextSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:23:39.240003-05:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:23:39.240003-05:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "XR/kU2biDQCK6HlPB38y7A=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "still “officially supported”, stick to AppleScript. "
+												},
+												{
+													"__type" : "quCitedTextSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:23:44.266875-05:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:23:46.940086-05:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "OtMwVGbiDQCK7wtZB38y7A=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "The language itself is terrible"
+												},
+												{
+													"__type" : "quCitedTextSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:23:52.131129-05:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:23:52.131129-05:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "DtOoVGbiDQCK+xgqB38y7A=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "application automation stuff works perfectly and, crucially, AS "
+												},
+												{
+													"__type" : "quCitedTextSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:22:58.608245-05:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:24:08.717102-05:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "IyJ4UWbiDQCK1XFiB38y7A=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "still has a small but experienced [user community](https://macscripter.net/) to help you out whenever you get stuck.",
+													"sourceID" : {
+														"__type" : "uuid",
+														"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+													}
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:15:02.074452-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:15:07.166899-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "9cAQNWbiDQCGfa4fB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Applescript"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "quCitedTextSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:13:38.183927-05:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-03T11:14:27.137111-05:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "RL0QMGbiDQCENYWCB38y7A=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "\"JXA [is] crippled and buggy… with lousy documentation and no official or community support worth a damn.\"",
+													"sourceID" : {
+														"__type" : "uuid",
+														"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+													}
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:14:39.29714-05:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-11-03T11:14:55.909467-05:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "mji1M2biDQCGUKsnB38y7A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[JavaScript for Automation (JXA)]]"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-14T20:25:43.772653-04:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-14T21:01:28.44953-04:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "//MZu9rgDQCIWLuEBBXDTw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "ObjC: Scripting Bridge from Apple is apparently problematic"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T20:16:44.920754-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:40:59.560907-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yr/7mtrgDQC/d8tTBBXDTw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Apple's official scripting bridges are problematic and not recommended:"
 						}
 					]
 				},
@@ -362,7 +1120,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T20:19:21.744802-04:00"
+						"dateAndTimeString" : "2024-11-03T11:24:55.998759-05:00"
 					}
 				},
 				"editEmail" : {
@@ -373,17 +1131,92 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T20:19:41.259706-04:00"
+						"dateAndTimeString" : "2024-11-03T11:24:58.92658-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "7qtUpNrgDQCC6tGEBBXDTw=="
+					"uidString" : "DFt3WGbiDQCLKQPoB38y7A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There are other high-level options available:"
+				"string" : "Bridges"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:43:33.62173-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-03T11:43:37.949268-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9O0Um2biDQCS1YsBB38y7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[AST"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:43:31.023077-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:43:33.248969-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "S0DtmmbiDQCSuO26B38y7A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Tools"
 			},
 			{
 				"__type" : "textSnippet",
@@ -410,7 +1243,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:02:50.446429-04:00"
+						"dateAndTimeString" : "2024-11-03T11:42:59.721074-05:00"
 					}
 				},
 				"uid" : {
@@ -420,44 +1253,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Problems"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:02:54.09062-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:03:19.771129-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "q+cJQNvgDQCQkmokBBXDTw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Here are a few SO threads exemplifying the gnashing of teeth that OSA can bring:"
+				"string" : "Problems - here are a few SO threads exemplifying the gnashing of teeth that OSA can bring:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -500,6 +1296,117 @@
 								"__type" : "textStyle"
 							},
 							"string" : "The bridge dynamically generates implementations based on the scripting dictionary's definitions. For example, for iTunes `playpause`, send a `hookPlPs` event (e.g. in ObjC `[iTunes sendEvent:'hook' id:'PlPs' parameters:0]`"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T21:04:18.566072-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T21:06:39.808513-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zucSRdvgDQCSuXaiBBXDTw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[AppleScript Mail Message Reference Cannot Be Used](https://stackoverflow.com/q/79084511) - also includes  good interactions with Matt Neuburg"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T21:05:05.963854-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T21:06:00.814016-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+yLmR9vgDQCS5RF6BBXDTw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[Applescript: Safari \"Do Javascript\" No Longer Returns Booleans?](https://stackoverflow.com/q/70425709)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T21:03:20.034091-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-14T21:03:43.454909-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OMOVQdvgDQCSWF/kBBXDTw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[How does one script the Keychain via rb-appscript?](https://stackoverflow.com/q/5758630)"
 						}
 					]
 				},
@@ -533,117 +1440,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "[ScriptingBridge - How Does It Work \"Behind the Scenes\"](https://stackoverflow.com/q/62007277) - includes some good interactions with uber-expert Matt Neuburg"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:04:18.566072-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:06:39.808513-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "zucSRdvgDQCSuXaiBBXDTw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[AppleScript Mail Message Reference Cannot Be Used](https://stackoverflow.com/q/79084511) - also includes  good interactions with Matt Neuburg"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:05:05.963854-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:06:00.814016-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "+yLmR9vgDQCS5RF6BBXDTw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[Applescript: Safari \"Do Javascript\" No Longer Returns Booleans?](https://stackoverflow.com/q/70425709)"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:03:20.034091-04:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-14T21:03:43.454909-04:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "OMOVQdvgDQCSWF/kBBXDTw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[How does one script the Keychain via rb-appscript?](https://stackoverflow.com/q/5758630)"
 			}
 		]
 	},

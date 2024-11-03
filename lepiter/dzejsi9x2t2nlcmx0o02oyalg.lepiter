@@ -1,0 +1,199 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "24ca8e9b-66e2-0d00-9327-d2e8077f32ec"
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "ASTranslate"
+	},
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:43:41.634169-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:43:41.634169-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jzaPm2biDQCTKKywB38y7A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "quCitedTextSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:45:05.761385-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:45:05.761385-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PuGSoGbiDQCTxWlWB38y7A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "ASTranslates only translates application commands, by sniffing the outgoing Apple event IPC messages and reformatting them in Python/Swift/JS syntax. It won’t translate the rest of your AppleScript code though; you still have to do that by hand.",
+				"sourceID" : {
+					"__type" : "uuid",
+					"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+				}
+			},
+			{
+				"__type" : "quCitedTextSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:44:07.031628-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:44:31.243159-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ir4SnWbiDQCTK8HdB38y7A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Quickest way to see this for yourself is to run some AppleScript commands through it. It’s a very quick-n-dirty tool [3] and may contain bugs, but even the most sophisticated AppleScript commands and references should work equally well in these other bridges too. Much clearer and easier to understand too.",
+				"sourceID" : {
+					"__type" : "uuid",
+					"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+				}
+			},
+			{
+				"__type" : "quCitedTextSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:45:03.002355-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-03T11:45:05.765521-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u8hooGbiDQCTup4qB38y7A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "(I do have a much more advanced AppleScript-to-Node.js translator that does convert entire scripts, created for migrating InDesign/Photoshop/Illustrator scripts from AppleScript to UXP. It currently manages 90% automated conversion from AS to JS, although the last step from nodeautomation to UXP APIs is currently TODO as Adobe have not yet finished UXP themselves. I don’t provide that tool as a free download though.)",
+				"sourceID" : {
+					"__type" : "uuid",
+					"uuid" : "50131e2a-66e2-0d00-8403-933f077f32ec"
+				}
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-11-03T11:43:41.6067-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-11-03T11:43:41.6067-05:00"
+		}
+	}
+}
