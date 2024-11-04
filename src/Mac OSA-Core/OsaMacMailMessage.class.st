@@ -15,6 +15,8 @@ With AS, osascript does not encode newlines as \n so seemingly would be more str
 Class {
 	#name : #OsaMacMailMessage,
 	#superclass : #Object,
+	#traits : 'PeTPythonWrapper',
+	#classTraits : 'PeTPythonWrapper classTrait',
 	#instVars : [
 		'id',
 		'mailboxName',
@@ -22,6 +24,14 @@ Class {
 	],
 	#category : #'Mac OSA-Core-Mail'
 }
+
+{ #category : #'as yet unclassified' }
+OsaMacMailMessage class >> fromPythonInstance: pyInstance [
+
+	^ self new
+		pythonInstance: pyInstance;
+		yourself
+]
 
 { #category : #'as yet unclassified' }
 OsaMacMailMessage class >> fromString: aString [
@@ -62,18 +72,32 @@ OsaMacMailMessage >> appleScriptReferenceString [
 ]
 
 { #category : #'as yet unclassified' }
+OsaMacMailMessage >> dateReceived [
+
+	| isoString |
+	"Date conversion adapted from https://stackoverflow.com/a/28147286"
+	isoString := self newCommandFactory
+		sourceWithResult: 'self.date_received().astimezone().isoformat()';
+		sendAndWait.
+		
+	^ DateAndTime fromString: isoString 
+]
+
+{ #category : #'as yet unclassified' }
 OsaMacMailMessage >> exported [
 
 	| target |
 	target := Tempfile named: self filenameForExport.
-	self sourceWriteTo: target.
+	target writeStreamDo: [ :str | str << self source ].
 	^ target asRlResource
 ]
 
 { #category : #'as yet unclassified' }
 OsaMacMailMessage >> filenameForExport [
 
-	^ (self dateReceived asFileNameCompatibleString, '_', self subject) asFilename, '.eml'
+	| base |
+	base := (self dateReceived asFileNameCompatibleString, '_', self subject) asFilename first: 63.
+	^ base, '.eml'
 ]
 
 { #category : #accessing }
@@ -87,7 +111,7 @@ OsaMacMailMessage >> id: anObject [
 ]
 
 { #category : #'as yet unclassified' }
-OsaMacMailMessage >> javaScriptReferenceString [
+OsaMacMailMessage >> jxaReferenceString [
 
 	| template |
 	template := 'Application("Mail").accounts.byId("{accountID}").mailboxes.byName("{mailboxName}").messages.byId({ID})'.
@@ -95,6 +119,20 @@ OsaMacMailMessage >> javaScriptReferenceString [
 		#ID -> self id asString.
 		#mailboxName -> self mailboxName.
 		#accountID -> self accountID } asDictionary.
+]
+
+{ #category : #'as yet unclassified' }
+OsaMacMailMessage >> jxaSourceWriteTo: aFileReference [
+
+	OsaJavaScript do: 'const app = Application.currentApplication();
+app.includeStandardAdditions = true;
+
+var filePath = "', aFileReference fullName, '"; // Change this to your desired file path
+
+const fileID = app.openForAccess(filePath,
+    \{writePermission: true\});
+app.write(', self string, '.source(), \{to: fileID\});
+app.closeAccess(fileID);'
 ]
 
 { #category : #accessing }
@@ -108,15 +146,17 @@ OsaMacMailMessage >> mailboxName: anObject [
 ]
 
 { #category : #'as yet unclassified' }
-OsaMacMailMessage >> sourceWriteTo: aFileReference [
+OsaMacMailMessage >> source [
 
-	OsaJavaScript do: 'const app = Application.currentApplication();
-app.includeStandardAdditions = true;
+	^ self newCommandFactory
+		sourceWithResult: 'self.source()';
+		sendAndWait
+]
 
-var filePath = "', aFileReference fullName, '"; // Change this to your desired file path
+{ #category : #'as yet unclassified' }
+OsaMacMailMessage >> subject [
 
-const fileID = app.openForAccess(filePath,
-    \{writePermission: true\});
-app.write(', self string, '.source(), \{to: fileID\});
-app.closeAccess(fileID);'
+	^ self newCommandFactory
+		sourceWithResult: 'self.subject()';
+		sendAndWait
 ]
