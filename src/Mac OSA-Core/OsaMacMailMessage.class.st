@@ -83,6 +83,17 @@ OsaMacMailMessage >> dateReceived [
 	^ DateAndTime fromString: isoString 
 ]
 
+{ #category : #'magritte-descriptions' }
+OsaMacMailMessage >> dateReceivedDescription [
+	<magritteDescription>
+	
+	^ MADateAndTimeDescription new
+		accessor: #dateReceived;
+		priority: 100;
+		beReadOnly;
+		yourself
+]
+
 { #category : #'as yet unclassified' }
 OsaMacMailMessage >> exported [
 
@@ -145,6 +156,25 @@ OsaMacMailMessage >> mailboxName: anObject [
 	mailboxName := anObject
 ]
 
+{ #category : #accessing }
+OsaMacMailMessage >> sender [
+
+	^ self newCommandFactory
+		sourceWithResult: 'self.sender()';
+		sendAndWait
+]
+
+{ #category : #'magritte-descriptions' }
+OsaMacMailMessage >> senderDescription [
+	<magritteDescription>
+	
+	^ MAStringDescription new
+		accessor: #sender;
+		priority: 300;
+		beReadOnly;
+		yourself
+]
+
 { #category : #'as yet unclassified' }
 OsaMacMailMessage >> source [
 
@@ -153,10 +183,43 @@ OsaMacMailMessage >> source [
 		sendAndWait
 ]
 
+{ #category : #'magritte-descriptions' }
+OsaMacMailMessage >> sourceDescription [
+	<magritteDescription>
+	
+	^ MAMemoDescription new
+		accessor: #source;
+		priority: 400;
+		lineCount: 20;
+		beReadOnly;
+		yourself
+]
+
+{ #category : #'GT Views' }
+OsaMacMailMessage >> sourceGtViewFor: aView [
+	<gtView>
+	
+	^ aView textEditor
+		title: 'Source' translated;
+		priority: 60;
+		text: [ self source ]
+]
+
 { #category : #'as yet unclassified' }
 OsaMacMailMessage >> subject [
 
 	^ self newCommandFactory
 		sourceWithResult: 'self.subject()';
 		sendAndWait
+]
+
+{ #category : #'magritte-descriptions' }
+OsaMacMailMessage >> subjectDescription [
+	<magritteDescription>
+	
+	^ MAStringDescription new
+		accessor: #subject;
+		priority: 200;
+		beReadOnly;
+		yourself
 ]
