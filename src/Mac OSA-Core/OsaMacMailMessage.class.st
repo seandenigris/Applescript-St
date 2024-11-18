@@ -107,7 +107,7 @@ OsaMacMailMessage >> exported [
 OsaMacMailMessage >> filenameForExport [
 
 	| base |
-	base := (self dateReceived asFileNameCompatibleString, '_', self subject) asFilename first: 63.
+	base := (self dateReceived asFileNameCompatibleString, '_', self subject) asFilename sliceTo: 63.
 	^ base, '.eml'
 ]
 
